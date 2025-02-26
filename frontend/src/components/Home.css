@@ -1,0 +1,211 @@
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --accent-color: #e74c3c;
+  --light-gray: #f5f5f5;
+  --dark-gray: #333;
+}
+
+/* Alap konténer */
+.home-container {
+  padding: 20px;
+  min-height: 100vh;
+  background-color: var(--light-gray);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Hero szekció */
+.hero-section {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  margin-bottom: 40px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.hero-section h1 {
+  font-size: 48px;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-section p {
+  font-size: 20px;
+  opacity: 0.9;
+}
+
+/* Szűrők és keresőmező */
+.filters-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.search-box input {
+  padding: 12px;
+  font-size: 16px;
+  width: 280px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.search-box input:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+/* Kategória gombok */
+.category-filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.category-btn {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  background: var(--primary-color);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+.category-btn:hover,
+.category-btn.active {
+  background: var(--secondary-color);
+}
+
+/* Termékek rácsos elrendezése */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Termékkártya */
+.product-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-card-content {
+  padding: 15px;
+}
+
+.product-title {
+  font-size: 1.2em;
+  color: var(--dark-gray);
+  margin: 0;
+}
+
+.product-description {
+  font-size: 0.9em;
+  color: #666;
+  margin: 10px 0;
+}
+
+/* Termék ár és gombok */
+.product-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.product-price {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: var(--secondary-color);
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #999;
+  margin-right: 10px;
+}
+
+.discounted-price {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+.add-to-cart-btn {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-to-cart-btn:hover {
+  background: var(--accent-color);
+}
+
+/* Akciós badge */
+.discount-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--accent-color);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 0.8em;
+}
+
+/* Betöltés és hibaüzenetek */
+.loading,
+.error,
+.no-products {
+  text-align: center;
+  padding: 20px;
+  font-size: 1.2em;
+}
+
+.error {
+  color: var(--accent-color);
+  background: #fde2e2;
+  border-radius: 5px;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.no-products {
+  color: #666;
+  font-style: italic;
+}

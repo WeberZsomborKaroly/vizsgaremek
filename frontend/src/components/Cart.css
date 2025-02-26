@@ -1,0 +1,24 @@
+/* Add your cart styles here */
+
+.cart-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.cart-container h2 {
+    margin-bottom: 20px;
+}
+
+.cart-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.cart-container li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-container h3 {
+    margin-top: 20px;
+}
